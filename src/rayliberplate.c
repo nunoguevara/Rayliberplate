@@ -38,16 +38,17 @@ RayPlateStatus InitRelativeWindowPercentage(const char *title, int pct_covx, int
     return RAY_PLATE_INVALID_STATE;
   }
   
-  const int windowWidth = GetMonitorWidth(monitor);
-  const int windowHeight = GetMonitorHeight(monitor);
+  const int monitorWidth = GetMonitorWidth(monitor);
+  const int monitorHeight = GetMonitorHeight(monitor);
+  const int windowWidth = monitorWidth * (pct_covx / 100.0f); 
+  const int windowHeight = monitorHeight * (pct_covy / 100.0f);
 
-  if ((int)windowWidth * (pct_covx / 100.0f) <= 0 || (int)windowHeight * (pct_covy / 100.0f) <= 0) {
+  if (windowWidth <= 0 || windowHeight <= 0) {
     CloseWindow();
     return RAY_PLATE_INVALID_STATE;
   }
   
-  SetWindowSize((int)windowWidth * (pct_covx / 100.0f), (int)windowHeight * (pct_covy / 100.0f));
-  SetWindowPosition((int)windowWidth * (50 / 100.0f), (int)windowHeight * (50 / 100.0f));
+  SetWindowSize(windowWidth, windowHeight);
 
   return RAY_PLATE_OK;
   
@@ -59,7 +60,7 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
     return RAY_PLATE_INVALID_ARGUMENT;
   }
 
-  if (div_covx <= 1 || div_covy <= 1) {
+  if (div_covx < 1 || div_covy < 1) {
     return RAY_PLATE_INVALID_ARGUMENT;
   }
 
@@ -80,16 +81,17 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
     return RAY_PLATE_INVALID_STATE;
   } 
 
-  const int windowWidth = GetMonitorWidth(monitor);
-  const int windowHeight = GetMonitorHeight(monitor);
-
-  if (windowWidth / (double)div_covx <= 0 || windowHeight / (double)div_covy <= 0) {
+  const int monitorWidth = GetMonitorWidth(monitor);
+  const int monitorHeight = GetMonitorHeight(monitor);
+  const int windowWidth = monitorWidth / div_covx;
+  const int windowHeight = monitorHeight / div_covy;
+  
+  if (windowWidth <= 0 || windowHeight <= 0) {
     CloseWindow();
     return RAY_PLATE_INVALID_STATE;
   }
 
-  SetWindowSize(windowWidth / (double)div_covx, windowHeight / (double)div_covy);
-  SetWindowPosition((int)windowWidth / 2, (int)windowHeight / 2);
+  SetWindowSize(windowWidth, windowHeight);
   
   return RAY_PLATE_OK;
 }
