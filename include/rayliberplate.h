@@ -27,6 +27,14 @@ RayPlateStatus InitRelativeWindowPercentage(
   
 );
 
+RayPlateStatus InitRelativeWindowDivisor(
+
+  const char *title,
+  double div_covx,
+  double div_covy
+
+);
+
 #ifdef __cplusplus
 }
 #endif
