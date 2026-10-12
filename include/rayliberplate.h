@@ -3,6 +3,9 @@
 #ifndef RAYLIBERPLATE_H
 #define RAYLIBERPLATE_H
 
+/* This is the header file for Rayliberplate, core features
+of the library are declared here to make it cleaner and CLEAR */
+
 #ifdef __cplusplus
 extern "C" {
 #endif

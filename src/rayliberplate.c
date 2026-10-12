@@ -2,7 +2,11 @@
 #include "raylib.h"
 #include "rayliberplate.h"
 
+/* This is the file for core implementations and functions for 
+the library */
+
 // Initializing relative window with percentage
+
 RayPlateStatus InitRelativeWindowPercentage(const char *title, int pct_covx, int pct_covy) {
 
   if (title == NULL) {
@@ -25,6 +29,7 @@ RayPlateStatus InitRelativeWindowPercentage(const char *title, int pct_covx, int
 
   // WARNING: Even if it's failed to get the current monitor, it still requires CloseWindow()
   // Otherwise, it could generate additional issues
+  
   if (GetCurrentMonitor() < 0 || GetCurrentMonitor() >= GetMonitorCount()) {
     CloseWindow();
     return RAY_PLATE_INVALID_STATE;
