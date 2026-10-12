@@ -19,6 +19,7 @@ typedef enum RayPlateStatus {
   
 } RayPlateStatus;
 
+RayPlateStatus SetWindowPosCenter();
 RayPlateStatus InitRelativeWindowPercentage(
 
   const char *title, 
@@ -26,7 +27,6 @@ RayPlateStatus InitRelativeWindowPercentage(
   int pct_covy
   
 );
-
 RayPlateStatus InitRelativeWindowDivisor(
 
   const char *title,

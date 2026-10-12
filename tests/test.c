@@ -70,6 +70,7 @@ int main(void) {
   printf("\nOVERALL TESTS RAN SUCCESSFULY\n");
 
   InitRelativeWindowDivisor("Test1", 1, 2);
+  SetWindowPosCenter();
 
   while (!WindowShouldClose()) {
     BeginDrawing();
