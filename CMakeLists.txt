@@ -9,6 +9,8 @@ project(
     
 )
 
+include(GNUInstallDirs)
+
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
@@ -29,7 +31,6 @@ add_library(
 
     rayliberplate 
     SHARED 
-    include/rayliberplate.h
     src/rayliberplate.c
        
 )
@@ -39,7 +40,24 @@ target_include_directories(
     rayliberplate 
     PUBLIC 
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 
 )
 
 target_link_libraries(rayliberplate PRIVATE raylib)
+
+install(
+
+    TARGETS rayliberplate
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+
+)
+
+install(
+
+    FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/rayliberplate.h
+    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+    
+)
