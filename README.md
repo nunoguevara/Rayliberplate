@@ -25,7 +25,6 @@ E,g:
 Initializes a window with the width of monitor's width / 1 and the height of monitor's height / 2
 
 # Installation Process📂
----
 ## Dependencies
 To install Rayliberplate, you need these to be installed first below:
 1. Git
