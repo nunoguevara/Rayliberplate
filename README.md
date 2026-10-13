@@ -1,10 +1,8 @@
 # Rayliberplate🍽️
----
 A convenient, minuscule, QoL-first, easy-to-use wrapper for raylib's window initializations!
 
-## Features and Docs⚙️
----
-## Features and Highlights
+# Features and Highlights⚙️
+## Highlights
 - Fast⚡
 - Minimum boilerplate🍽️
 - QoL-oriented🌱
