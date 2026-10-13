@@ -6,6 +6,7 @@ A convenient, minuscule, QoL-first, easy-to-use wrapper for raylib's window init
 - Minimum boilerplate🍽️
 - QoL-oriented🌱
 - Very lightweight🪶
+- C++ compatible🔗
 
 ## Available functions
 `SetWindowPosCenter();`
