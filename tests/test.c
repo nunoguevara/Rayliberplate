@@ -49,8 +49,18 @@ int EdgeCaseHandlingTest() {
     
     return -1;
   }
-  
-  printf("\nTest 6 clear");
+
+  printf("\nTest %d clear", i);
+  i++;
+
+  status = InitRelativeWindowDivisor("Test", 0, 0);
+  if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
+
+  status = InitRelativeWindowDivisor("Test", -1, -1);
+  if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
+
+  status = InitRelativeWindowDivisor(NULL, 2, 1);
+  if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
   
   printf("\nEDGE CASE HANDLING TEST RAN SUCCESSFULY");
   

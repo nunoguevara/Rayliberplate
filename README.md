@@ -1,5 +1,5 @@
 # Rayliberplate🍽️
-A convenient, minuscule, QoL-first, easy-to-use wrapper for raylib's window initializations!
+A convenient, minuscule, QoL-first, easy-to-use unofficial wrapper for raylib's window initializations!
 
 ## Highlights
 - Fast⚡
