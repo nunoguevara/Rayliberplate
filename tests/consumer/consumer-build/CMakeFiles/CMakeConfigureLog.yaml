@@ -1,0 +1,1664 @@
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_UNAME"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "uname"
+    candidate_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    searched_directories:
+      - "/usr/local/sbin/uname"
+      - "/usr/local/bin/uname"
+    found: "/usr/sbin/uname"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:218 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.17.0-PRoot-Distro - aarch64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_MAKE_PROGRAM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gmake"
+      - "make"
+      - "smake"
+    candidate_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    searched_directories:
+      - "/usr/local/sbin/gmake"
+      - "/usr/local/bin/gmake"
+      - "/usr/sbin/gmake"
+      - "/usr/bin/gmake"
+      - "/sbin/gmake"
+      - "/bin/gmake"
+      - "/usr/local/games/gmake"
+      - "/usr/games/gmake"
+      - "/data/data/com.termux/files/usr/bin/gmake"
+      - "/system/bin/gmake"
+      - "/system/xbin/gmake"
+      - "/usr/local/sbin/make"
+      - "/usr/local/bin/make"
+    found: "/usr/sbin/make"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER"
+    description: "C compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "cc"
+      - "gcc"
+      - "cl"
+      - "bcc"
+      - "xlc"
+      - "icx"
+      - "clang"
+    candidate_directories:
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/sbin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    searched_directories:
+      - "/usr/local/sbin/cc"
+      - "/usr/local/bin/cc"
+    found: "/usr/sbin/cc"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:501 (find_file)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:538 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "/usr/share/cmake/Modules/"
+    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/sbin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/4.4.4/CompilerIdC/a.out
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ar"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/ar"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ranlib"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "strip"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/strip"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ld"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/ld"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "nm"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/nm"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objdump"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/objdump"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJCOPY"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "objcopy"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/objcopy"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "readelf"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/readelf"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "dlltool"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    searched_directories:
+      - "/usr/sbin/dlltool"
+      - "/usr/local/sbin/dlltool"
+      - "/usr/local/bin/dlltool"
+      - "/usr/bin/dlltool"
+      - "/sbin/dlltool"
+      - "/bin/dlltool"
+      - "/usr/local/games/dlltool"
+      - "/usr/games/dlltool"
+    found: "/data/data/com.termux/files/usr/bin/dlltool"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "addr2line"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    found: "/usr/sbin/addr2line"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:247 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "tapi"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    searched_directories:
+      - "/usr/sbin/tapi"
+      - "/usr/local/sbin/tapi"
+      - "/usr/local/bin/tapi"
+      - "/usr/bin/tapi"
+      - "/sbin/tapi"
+      - "/bin/tapi"
+      - "/usr/local/games/tapi"
+      - "/usr/games/tapi"
+      - "/data/data/com.termux/files/usr/bin/tapi"
+      - "/system/bin/tapi"
+      - "/system/xbin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ar-16.1"
+      - "gcc-ar-16"
+      - "gcc-ar16"
+      - "gcc-ar"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    searched_directories:
+      - "/usr/sbin/gcc-ar-16.1"
+      - "/usr/local/sbin/gcc-ar-16.1"
+      - "/usr/local/bin/gcc-ar-16.1"
+      - "/usr/bin/gcc-ar-16.1"
+      - "/sbin/gcc-ar-16.1"
+      - "/bin/gcc-ar-16.1"
+      - "/usr/local/games/gcc-ar-16.1"
+      - "/usr/games/gcc-ar-16.1"
+      - "/data/data/com.termux/files/usr/bin/gcc-ar-16.1"
+      - "/system/bin/gcc-ar-16.1"
+      - "/system/xbin/gcc-ar-16.1"
+      - "/usr/sbin/gcc-ar-16"
+      - "/usr/local/sbin/gcc-ar-16"
+      - "/usr/local/bin/gcc-ar-16"
+      - "/usr/bin/gcc-ar-16"
+      - "/sbin/gcc-ar-16"
+      - "/bin/gcc-ar-16"
+      - "/usr/local/games/gcc-ar-16"
+      - "/usr/games/gcc-ar-16"
+      - "/data/data/com.termux/files/usr/bin/gcc-ar-16"
+      - "/system/bin/gcc-ar-16"
+      - "/system/xbin/gcc-ar-16"
+      - "/usr/sbin/gcc-ar16"
+      - "/usr/local/sbin/gcc-ar16"
+      - "/usr/local/bin/gcc-ar16"
+      - "/usr/bin/gcc-ar16"
+      - "/sbin/gcc-ar16"
+      - "/bin/gcc-ar16"
+      - "/usr/local/games/gcc-ar16"
+      - "/usr/games/gcc-ar16"
+      - "/data/data/com.termux/files/usr/bin/gcc-ar16"
+      - "/system/bin/gcc-ar16"
+      - "/system/xbin/gcc-ar16"
+    found: "/usr/sbin/gcc-ar"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:2 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "gcc-ranlib-16.1"
+      - "gcc-ranlib-16"
+      - "gcc-ranlib16"
+      - "gcc-ranlib"
+    candidate_directories:
+      - "/usr/sbin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/sbin/"
+      - "/bin/"
+      - "/usr/local/games/"
+      - "/usr/games/"
+      - "/data/data/com.termux/files/usr/bin/"
+      - "/system/bin/"
+      - "/system/xbin/"
+    searched_directories:
+      - "/usr/sbin/gcc-ranlib-16.1"
+      - "/usr/local/sbin/gcc-ranlib-16.1"
+      - "/usr/local/bin/gcc-ranlib-16.1"
+      - "/usr/bin/gcc-ranlib-16.1"
+      - "/sbin/gcc-ranlib-16.1"
+      - "/bin/gcc-ranlib-16.1"
+      - "/usr/local/games/gcc-ranlib-16.1"
+      - "/usr/games/gcc-ranlib-16.1"
+      - "/data/data/com.termux/files/usr/bin/gcc-ranlib-16.1"
+      - "/system/bin/gcc-ranlib-16.1"
+      - "/system/xbin/gcc-ranlib-16.1"
+      - "/usr/sbin/gcc-ranlib-16"
+      - "/usr/local/sbin/gcc-ranlib-16"
+      - "/usr/local/bin/gcc-ranlib-16"
+      - "/usr/bin/gcc-ranlib-16"
+      - "/sbin/gcc-ranlib-16"
+      - "/bin/gcc-ranlib-16"
+      - "/usr/local/games/gcc-ranlib-16"
+      - "/usr/games/gcc-ranlib-16"
+      - "/data/data/com.termux/files/usr/bin/gcc-ranlib-16"
+      - "/system/bin/gcc-ranlib-16"
+      - "/system/xbin/gcc-ranlib-16"
+      - "/usr/sbin/gcc-ranlib16"
+      - "/usr/local/sbin/gcc-ranlib16"
+      - "/usr/local/bin/gcc-ranlib16"
+      - "/usr/bin/gcc-ranlib16"
+      - "/sbin/gcc-ranlib16"
+      - "/bin/gcc-ranlib16"
+      - "/usr/local/games/gcc-ranlib16"
+      - "/usr/games/gcc-ranlib16"
+      - "/data/data/com.termux/files/usr/bin/gcc-ranlib16"
+      - "/system/bin/gcc-ranlib16"
+      - "/system/xbin/gcc-ranlib16"
+    found: "/usr/sbin/gcc-ranlib"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:123 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/CMakeScratch/TryCompile-ddLu74"
+      binary: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/CMakeScratch/TryCompile-ddLu74"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: false
+      stdout: |
+        Change Dir: '/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/CMakeScratch/TryCompile-ddLu74'
+        
+        Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_165b5/fast
+        /usr/sbin/make  -f CMakeFiles/cmTC_165b5.dir/build.make CMakeFiles/cmTC_165b5.dir/build
+        make[1]: Entering directory '/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/CMakeScratch/TryCompile-ddLu74'
+        Building C object CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o
+        /usr/sbin/cc   -v -o CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/sbin/cc
+        Target: aarch64-unknown-linux-gnu
+        Configured with: /build/gcc/src/gcc/configure --enable-languages=c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust,cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://github.com/archlinuxarm/PKGBUILDs/issues --with-linker-hash-style=gnu --with-system-zlib --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-linker-build-id --enable-lto --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-multilib --disable-werror --disable-fixincludes --host=aarch64-unknown-linux-gnu --build=aarch64-unknown-linux-gnu --with-arch=armv8-a
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.1 20260430 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o' '-c' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_165b5.dir/'
+         /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_165b5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=armv8-a -mlittle-endian -mabi=lp64 -version -o /tmp/ccUVp46S.s
+        GNU C23 (GCC) version 16.1.1 20260430 (aarch64-unknown-linux-gnu)
+        	compiled by GNU C version 16.1.1 20260430, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../aarch64-unknown-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        Compiler executable checksum: eecb575580f5957b8baa174925f73888
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o' '-c' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_165b5.dir/'
+         as -v -EL -march=armv8-a -mabi=lp64 -o CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o /tmp/ccUVp46S.s
+        GNU assembler version 2.46.0 (aarch64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.46.0
+        COMPILER_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o' '-c' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_165b5
+        /usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_165b5.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/sbin/cc
+        COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper
+        Target: aarch64-unknown-linux-gnu
+        Configured with: /build/gcc/src/gcc/configure --enable-languages=c,c++,d,fortran,go,lto,m2,objc,obj-c++,rust,cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://github.com/archlinuxarm/PKGBUILDs/issues --with-linker-hash-style=gnu --with-system-zlib --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-linker-build-id --enable-lto --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-multilib --disable-werror --disable-fixincludes --host=aarch64-unknown-linux-gnu --build=aarch64-unknown-linux-gnu --with-arch=armv8-a
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 16.1.1 20260430 (GCC) 
+        COMPILER_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_165b5' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_165b5.'
+         /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb7P31E.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_165b5 /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1 -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o
+        collect2 version 16.1.1 20260430
+        /usr/sbin/ld -plugin /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb7P31E.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_165b5 /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1 -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o
+        GNU ld (GNU Binutils) 2.46.0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_165b5' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_165b5.'
+        /usr/sbin/cc  -v -Wl,-v CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -o cmTC_165b5
+        make[1]: Leaving directory '/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/CMakeScratch/TryCompile-ddLu74'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:255 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include] ==> [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:291 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
+        ignore line: [Change Dir: '/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/CMakeScratch/TryCompile-ddLu74']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/sbin/cmake -E env VERBOSE=1 /usr/sbin/make -f Makefile cmTC_165b5/fast]
+        ignore line: [/usr/sbin/make  -f CMakeFiles/cmTC_165b5.dir/build.make CMakeFiles/cmTC_165b5.dir/build]
+        ignore line: [make[1]: Entering directory '/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/CMakeScratch/TryCompile-ddLu74']
+        ignore line: [Building C object CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/sbin/cc   -v -o CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/sbin/cc]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=c c++ d fortran go lto m2 objc obj-c++ rust cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://github.com/archlinuxarm/PKGBUILDs/issues --with-linker-hash-style=gnu --with-system-zlib --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-linker-build-id --enable-lto --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-multilib --disable-werror --disable-fixincludes --host=aarch64-unknown-linux-gnu --build=aarch64-unknown-linux-gnu --with-arch=armv8-a]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.1 20260430 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o' '-c' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_165b5.dir/']
+        ignore line: [ /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_165b5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=armv8-a -mlittle-endian -mabi=lp64 -version -o /tmp/ccUVp46S.s]
+        ignore line: [GNU C23 (GCC) version 16.1.1 20260430 (aarch64-unknown-linux-gnu)]
+        ignore line: [	compiled by GNU C version 16.1.1 20260430  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../aarch64-unknown-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: eecb575580f5957b8baa174925f73888]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o' '-c' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_165b5.dir/']
+        ignore line: [ as -v -EL -march=armv8-a -mabi=lp64 -o CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o /tmp/ccUVp46S.s]
+        ignore line: [GNU assembler version 2.46.0 (aarch64-unknown-linux-gnu) using BFD version (GNU Binutils) 2.46.0]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o' '-c' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_165b5]
+        ignore line: [/usr/sbin/cmake -E cmake_link_script CMakeFiles/cmTC_165b5.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/sbin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Configured with: /build/gcc/src/gcc/configure --enable-languages=c c++ d fortran go lto m2 objc obj-c++ rust cobol --enable-bootstrap --prefix=/usr --libdir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://github.com/archlinuxarm/PKGBUILDs/issues --with-linker-hash-style=gnu --with-system-zlib --enable-checking=release --enable-clocale=gnu --enable-default-pie --enable-default-ssp --enable-gnu-indirect-function --enable-gnu-unique-object --enable-libstdcxx-backtrace --enable-linker-build-id --enable-lto --enable-plugin --enable-shared --enable-threads=posix --disable-libssp --disable-libstdcxx-pch --disable-multilib --disable-werror --disable-fixincludes --host=aarch64-unknown-linux-gnu --build=aarch64-unknown-linux-gnu --with-arch=armv8-a]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 16.1.1 20260430 (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_165b5' '-march=armv8-a' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_165b5.']
+        link line: [ /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/collect2 -plugin /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb7P31E.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_165b5 /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1 -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o]
+          arg [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccb7P31E.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+          arg [-X] ==> ignore
+          arg [-EL] ==> ignore
+          arg [-maarch64linux] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_165b5] ==> ignore
+          arg [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o]
+          arg [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o]
+          arg [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o] ==> obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o]
+          arg [-L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1] ==> dir [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1]
+          arg [-L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib] ==> dir [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../..] ==> dir [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../..]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [-latomic_asneeded] ==> lib [atomic_asneeded]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
+          arg [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o] ==> obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o]
+          arg [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o]
+        ignore line: [collect2 version 16.1.1 20260430]
+        link line: [/usr/sbin/ld -plugin /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb7P31E.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_165b5 /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1 -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o] ==> linker [/usr/sbin/ld]
+        ignore line: [/usr/sbin/ld -plugin /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/liblto_plugin.so -plugin-opt=/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/lto-wrapper -plugin-opt=-fresolution=/tmp/ccb7P31E.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --eh-frame-hdr --hash-style=gnu -dynamic-linker /lib/ld-linux-aarch64.so.1 -X -EL -maarch64linux -pie -o cmTC_165b5 /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1 -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_165b5.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o /usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o]
+        linker tool for 'C': /usr/sbin/ld 
+        collapse obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
+        collapse obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
+        collapse obj [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib/crtn.o] ==> [/usr/lib/crtn.o]
+        collapse library dir [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1] ==> [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1]
+        collapse library dir [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/../../..] ==> [/usr/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s_asneeded;atomic_asneeded;c;gcc;gcc_s_asneeded]
+        implicit objs: [/usr/lib/Scrt1.o;/usr/lib/crti.o;/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtbeginS.o;/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1/crtendS.o;/usr/lib/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-unknown-linux-gnu/16.1.1;/usr/lib;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:41 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:337 (cmake_determine_linker_id)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/sbin/ld" "-v"
+      GNU ld (GNU Binutils) 2.46.0
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:10 (find_package)"
+    name: "raylib"
+    configs:
+      -
+        filename: "raylib.cps"
+        kind: "cps"
+      -
+        filename: "raylibConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "raylib-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "raylib"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/raylibConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/raylib-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/lib/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/share/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/raylibConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/raylib-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cmake/Rayliberplate/raylibConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cmake/Rayliberplate/raylib-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/raylibConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/raylib-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/raylib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cmake/raylib/raylibConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/cmake/raylib/raylib-config.cmake"
+      mode: "config"
+      version: "6.0.0"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:11 (find_package)"
+    name: "Rayliberplate"
+    configs:
+      -
+        filename: "Rayliberplate.cps"
+        kind: "cps"
+      -
+        filename: "rayliberplate.cps"
+        kind: "cps"
+      -
+        filename: "RayliberplateConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "rayliberplate-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Rayliberplate"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/RayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/lib/cps/Rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/lib/cps/rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/share/cps/Rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/share/cps/rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/RayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/Rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/Rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/usr/local/lib/cmake/Rayliberplate/RayliberplateConfig.cmake"
+      mode: "config"
+      version: "0.1.0"
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:14 (find_package)"
+    name: "Rayliberplate::rayliberplate"
+    configs:
+      -
+        filename: "Rayliberplate::rayliberplate.cps"
+        kind: "cps"
+      -
+        filename: "rayliberplate::rayliberplate.cps"
+        kind: "cps"
+      -
+        filename: "Rayliberplate::rayliberplateConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "rayliberplate::rayliberplate-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "Rayliberplate::rayliberplate"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/Nora/Projects/Rayliberplate/tests/consumer/consumer-build/CMakeFiles/pkgRedirects/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/games/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/data/data/com.termux/files/usr/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/data/data/com.termux/files/usr/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/data/data/com.termux/files/usr/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/data/data/com.termux/files/usr/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/data/data/com.termux/files/usr/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/data/data/com.termux/files/usr/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/system/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/system/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/xbin/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/system/xbin/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/system/xbin/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/xbin/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/xbin/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/system/xbin/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/Rayliberplate::rayliberplateConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/rayliberplate::rayliberplate-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/lib/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/lib/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/share/cps/Rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/share/cps/rayliberplate::rayliberplate.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/local/games"
+        - "/usr/games"
+        - "/data/data/com.termux/files/usr/bin"
+        - "/system/bin"
+        - "/system/xbin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...
