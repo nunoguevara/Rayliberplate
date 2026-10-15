@@ -16,7 +16,7 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-find_package(raylibCONFIG REQUIRED)
+find_package(raylib CONFIG REQUIRED)
 
 add_library(
 
