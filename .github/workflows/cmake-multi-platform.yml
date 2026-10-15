@@ -52,8 +52,11 @@ jobs:
 
     - name: Install Windows dependencies
       if: runner.os == 'Windows'
-      run: pacman -Syu
-           pacman -S raylib
+      run: |
+          git clone --depth=1 https://github.com/raysan5/raylib.git external/raylib
+          cmake -B build -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DBUILD_EXAMPLES=OFF -DBUILD_SHARED_LIBS=OFF
+          cmake --build build
+          cmake --install build
            
     - name: Install Linux dependencies
       if: runner.os == 'Linux'
@@ -78,7 +81,6 @@ jobs:
         cmake -DBUILD_SHARED_LIBS=ON ..
         make
         sudo make install
-
 
     - name: Install MacOS dependencies 
       if: runner.os == 'macOS'
