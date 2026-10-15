@@ -2,6 +2,7 @@ name: Build Workflow
 
 on:
   push:
+  pull_request:
 
 jobs:
   build-linux:
@@ -57,7 +58,7 @@ jobs:
           sudo cmake --install build
             
   build-mac:
-    name: MacOS test, ${{ matrix.compiler }}
+    name: MacOS test, clang
     runs-on: macos-latest
 
     strategy:
