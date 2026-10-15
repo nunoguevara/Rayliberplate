@@ -68,7 +68,18 @@ jobs:
           libgl1-mesa-dev \
           libglu1-mesa-dev \
         sudo apt install raylib
-          
+
+    - name: Build and install raylib for Linux
+      if: runner.os == 'Linux'
+      run: | 
+        git clone https://github.com/raysan5/raylib.git
+        cd raylib
+        mkdir build && cd build
+        cmake -DBUILD_SHARED_LIBS=ON ..
+        make
+        sudo make install
+
+
     - name: Install MacOS dependencies 
       if: runner.os == 'macOS'
       run: brew install raylib
