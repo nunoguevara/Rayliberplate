@@ -14,20 +14,9 @@ include(GNUInstallDirs)
 set(CMAKE_C_STANDARD 23)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
-include(FetchContent)
-
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-FetchContent_Declare(
-
-    raylib
-    GIT_REPOSITORY https://github.com/raysan5/raylib.git
-    GIT_TAG 6.0
-    FIND_PACKAGE_ARGS
-  
-)
-
-FetchContent_MakeAvailable(raylib)
+find_package(raylib REQUIRED)
 
 add_library(
 
