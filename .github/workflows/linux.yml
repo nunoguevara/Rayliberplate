@@ -1,0 +1,56 @@
+name: Linux Build Test
+
+on:
+  push:
+
+jobs:
+  build:
+    name: Ubuntu test, ${{ matrix.compiler }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+          compiler: [gcc, clang]
+      
+    steps:
+      - name : Check out repository
+        uses : actions/checkout@v4
+
+      - name: Compiler installation
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ${{ matrix.compiler }}
+
+      - name: Linux dependencies installation
+        run: |
+          sudo apt-get install -y \
+          libasound2-dev \ 
+          libx11-dev \ 
+          libxrandr-dev \ 
+          libxi-dev \ 
+          libxinerama-dev \
+          libxcursor-dev \
+          libgl1-mesa-dev \ 
+          libglu1-mesa-dev
+
+      - name: Installing and building raylib
+        run: |
+          git clone https://github.com/raysan5/raylib.git
+          cmake -S raylib -B raylib/build -DBUILD_SHARED_LIBS=ON -DCMAKE_C_COMPILER=${{ matrix.compiler }}
+          cmake --build raylib/build
+          sudo cmake --install raylib/build
+          sudo ldconfig
+          
+      - name: Checking if raylib is installed
+        run: |
+          ldconfig -p | grep -i raylib
+
+      - name : Configuring Rayliberplate
+        run: |
+          cmake -S . -B build -DCMAKE_C_COMPILER=${{ matrix.compiler }} -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SHARED_LIBS=ON
+
+      - name : Building and installing Rayliberplate
+        run: |
+          cmake --build build
+          sudo cmake --install build

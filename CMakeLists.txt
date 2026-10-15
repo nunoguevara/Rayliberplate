@@ -20,8 +20,7 @@ find_package(raylib CONFIG REQUIRED)
 
 add_library(
 
-    rayliberplate 
-    SHARED 
+    rayliberplate  
     src/rayliberplate.c
        
 )
