@@ -39,7 +39,7 @@ jobs:
       - name: Installing and building raylib
         run: |
           git clone https://github.com/raysan5/raylib.git
-          cmake -S raylib -B raylib/build -DBUILD_SHARED_LIBS=ON -DCMAKE_C_COMPILER=${{ matrix.compiler }}
+          cmake -S raylib -B raylib/build -DBUILD_SHARED_LIBS=ON -DBUILD_C_COMPILER=${{ matrix.compiler }}
           cmake --build raylib/build
           sudo cmake --install raylib/build
           sudo ldconfig
@@ -77,7 +77,7 @@ jobs:
 
       - name : Configuring Rayliberplate
         run: |
-          cmake -S . -B build -DCMAKE_C_COMPILER=clang -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SHARED_LIBS=ON
+          cmake -S . -B build -DCMAKE_C_COMPILER=clang -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=ON
 
       - name : Building and installing Rayliberplate
         run: |
