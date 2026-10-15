@@ -1,10 +1,10 @@
-name: Linux Build Test
+name: Build Workflow
 
 on:
   push:
 
 jobs:
-  build:
+  build-linux:
     name: Ubuntu test, ${{ matrix.compiler }}
     runs-on: ubuntu-latest
 
@@ -24,7 +24,8 @@ jobs:
 
       - name: Linux dependencies installation
         run: |
-          sudo apt-get install -y
+          sudo apt-get update
+          sudo apt-get install -y \
           libasound2-dev \ 
           libx11-dev \ 
           libxrandr-dev \ 
@@ -54,3 +55,33 @@ jobs:
         run: |
           cmake --build build
           sudo cmake --install build
+            
+  build-mac:
+    name: MacOS test, ${{ matrix.compiler }}
+    runs-on: macos-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+          compiler: clang
+      
+    steps:
+      - name : Check out repository
+        uses : actions/checkout@v4
+
+      - name: Installing raylib
+        run: brew install raylib
+          
+      - name: Checking if raylib is installed
+        run: |
+          brew list --formula raylib
+
+      - name : Configuring Rayliberplate
+        run: |
+          cmake -S . -B build -DCMAKE_C_COMPILER=${{ matrix.compiler }} -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SHARED_LIBS=ON
+
+      - name : Building and installing Rayliberplate
+        run: |
+          cmake --build build
+          sudo cmake --install build  
+
