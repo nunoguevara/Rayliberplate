@@ -51,7 +51,7 @@ jobs:
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name: Install Windows dependencies
-      if: runner.os == "Windows"
+      if: runner.os == 'Windows'
       run: pacman -Syu
            pacman -S raylib
            
