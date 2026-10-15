@@ -16,6 +16,7 @@ RayPlateStatus SetWindowPosCenter() {
   if (monitor < 0 || monitor >= GetMonitorCount()) {
     return RAY_PLATE_INVALID_STATE;
   }
+  
   const int monitorWidth = GetMonitorWidth(monitor);
   const int monitorHeight = GetMonitorHeight(monitor);
 
@@ -135,4 +136,5 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
   SetWindowSize(windowWidth, windowHeight);
   
   return RAY_PLATE_OK;
+  
 }
