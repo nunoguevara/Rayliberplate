@@ -24,7 +24,7 @@ jobs:
 
       - name: Linux dependencies installation
         run: |
-          sudo apt-get install -y \
+          sudo apt-get install -y
           libasound2-dev \ 
           libx11-dev \ 
           libxrandr-dev \ 
