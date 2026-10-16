@@ -58,7 +58,7 @@ jobs:
           sudo cmake --install build
 
       - name : Building the test program
-        uses: GabrielBB/xvfb-action
+        uses: GabrielBB/xvfb-action@v1
         run : |
           cd tests/consumer
           cmake -S . -B consumer-build -DCMAKE_C_COMPILER=${{ matrix.compiler }} -DCMAKE_BUILD_TYPE=Debug
