@@ -84,7 +84,7 @@ int main(void) {
 
   int testTime = 100;
   
-  while (!WindowShouldClose() || testTime > 0) {
+  while (!WindowShouldClose() && testTime > 0) {
     testTime--;
     BeginDrawing();
       ClearBackground(RAYWHITE);
