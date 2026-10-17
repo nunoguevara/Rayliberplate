@@ -5,28 +5,32 @@ on:
   pull_request:
 
 jobs:
-  build-linux:
-    name: Ubuntu test, ${{ matrix.compiler }}
-    runs-on: ubuntu-latest
-
+  build-and-test:
     strategy:
       fail-fast: false
       matrix:
-          compiler: [gcc, clang]
-      
+          include:
+            - os: ubuntu-latest
+              compiler: gcc
+            - os: ubuntu-latest
+              compiler: clang
+            - os: macos-latest
+              compiler: clang
+
+    name: ${{ matrix.os }}, ${{ matrix.compiler }}
+    
+    runs-on: ${{ matrix.os }}
+    
     steps:
       - name : Check out repository
         uses : actions/checkout@v4
 
-      - name: Compiler installation
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ${{ matrix.compiler }}
-
-      - name: Linux dependencies installation
-        run: |
+      - name : Dependencies and compiler installation (Linux)
+        if : runner.os == 'Linux'
+        run : |
           sudo apt-get update
           sudo apt-get install -y \
+            "${{ matrix.compiler }}" \
             libasound2-dev \
             libx11-dev \
             libxrandr-dev \
@@ -36,30 +40,31 @@ jobs:
             libgl1-mesa-dev \
             libglu1-mesa-dev
             
-      - name: Setting up dist folder
-        run: | 
-          mkdir "$HOME/dist"
+      - name : Setting up dist folder
+        run : | 
+          mkdir -p "$HOME/dist"
         
-      - name: Installing and building raylib
-        run: |
-          git clone https://github.com/raysan5/raylib.git
+      - name : Installing and building raylib
+        run : |
+          git clone --branch v6.0 --single-branch --depth 1 https://github.com/raysan5/raylib.git
           cmake -S raylib -B raylib/build \
             -DBUILD_SHARED_LIBS=ON \
-            -DCMAKE_C_COMPILER=${{ matrix.compiler }} \
+            -DCMAKE_C_COMPILER="${{ matrix.compiler }}" \
             -DCMAKE_INSTALL_PREFIX="$HOME/dist"
           cmake --build raylib/build
           cmake --install raylib/build
 
       - name : Configuring Rayliberplate
-        run: |
+        run : |
           cmake -S . -B build \
-            -DCMAKE_C_COMPILER=${{ matrix.compiler }} \
+            -DCMAKE_C_COMPILER="${{ matrix.compiler }}" \
             -DCMAKE_BUILD_TYPE=Debug \
             -DBUILD_SHARED_LIBS=ON \
+            -DCMAKE_PREFIX_PATH="$HOME/dist" \
             -DCMAKE_INSTALL_PREFIX="$HOME/dist"
-
+            
       - name : Building and installing Rayliberplate
-        run: |
+        run : |
           cmake --build build
           cmake --install build
 
@@ -69,41 +74,51 @@ jobs:
           cmake -S . -B consumer-build \
             -DCMAKE_C_COMPILER=${{ matrix.compiler }} \
             -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_PREFIX_PATH="$HOME/dist" \
             -DCMAKE_INSTALL_PREFIX="$HOME/dist"
           cmake --build consumer-build
           cmake --install consumer-build
           
-      - name : Running the test program
-        uses: GabrielBB/xvfb-action@v1
-        with: 
+      - name : Running the test program (Linux)
+        if : runner.os == 'Linux'
+        uses : GabrielBB/xvfb-action@v1
+        with : 
           run : |
-            LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/dist/lib" \
-              "$HOME/dist/bin/consumer"
+            export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/dist/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+            "$HOME/dist/bin/consumer"
             
-  build-mac:
-    name: MacOS test, clang
-    runs-on: macos-latest
+      - name : Running the test program (MacOS)
+        if : runner.os == 'macOS'
+        run: |
+          export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$HOME/dist/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
+          "$HOME/dist/bin/consumer"
+            
+  # build-mac:
+  #   name: MacOS test, clang
+  #   runs-on: macos-latest
 
-    strategy:
-      fail-fast: false
+  #   strategy:
+  #     fail-fast: false
   
-    steps:
-      - name : Check out repository
-        uses : actions/checkout@v4
+  #   steps:
+  #     - name : Check out repository
+  #       uses : actions/checkout@v4
 
-      - name: Installing raylib
-        run: brew install raylib
+  #     - name: Setting up dist folder
+  #       run: mkdir "$HOME/sandbox"
+        
+  #     - name: Installing raylib
+  #       run: brew install raylib
           
-      - name: Checking if raylib is installed
-        run: |
-          brew list --formula raylib
+  #     - name: Checking if raylib is installed
+  #       run: |
+  #         brew list --formula raylib
 
-      - name : Configuring Rayliberplate
-        run: |
-          cmake -S . -B build -DCMAKE_C_COMPILER=clang -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=ON
+  #     - name : Configuring Rayliberplate
+  #       run: |
+  #         cmake -S . -B build -DCMAKE_C_COMPILER=clang -DCMAKE_BUILD_TYPE=Debug -DBUILD_SHARED_LIBS=ON
 
-      - name : Building and installing Rayliberplate
-        run: |
-          cmake --build build
-          sudo cmake --install build  
-
+  #     - name : Building and installing Rayliberplate
+  #       run: |
+  #         cmake --build build
+  #         sudo cmake --install build  
