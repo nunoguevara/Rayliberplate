@@ -77,8 +77,8 @@ jobs:
         uses: GabrielBB/xvfb-action@v1
         with: 
           run : |
-          export PATH="$HOME/sandbox/bin:$PATH"
-          LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/sandbox/lib" consumer
+            export PATH="$HOME/sandbox/bin:$PATH"
+            LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/sandbox/lib" consumer
             
   build-mac:
     name: MacOS test, clang
