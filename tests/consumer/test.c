@@ -82,7 +82,10 @@ int main(void) {
   InitRelativeWindowDivisor("Test1", 1, 2);
   SetWindowPosCenter();
 
-  while (!WindowShouldClose()) {
+  int testTime = 100;
+  
+  while (!WindowShouldClose() && testTime > 0) {
+    testTime--;
     BeginDrawing();
       ClearBackground(RAYWHITE);
     EndDrawing();

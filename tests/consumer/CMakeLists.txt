@@ -22,4 +22,3 @@ install(
   TARGETS consumer 
   RUNTIME DESTINATION bin
 )
-
