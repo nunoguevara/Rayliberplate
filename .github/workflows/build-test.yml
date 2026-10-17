@@ -84,15 +84,16 @@ jobs:
           cmake --install consumer-build
           ls -a "$HOME/dist/bin"
 
-      - name : Preparing library path (Linux)
+      - name : Preparing library path and permission (Linux)
         if : runner.os == 'Linux'
-        run: export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/dist/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-        
+        run: |
+          export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/dist/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+          
       - name : Running the test program (Linux)
         if : runner.os == 'Linux'
         uses : GabrielBB/xvfb-action@v1
         with : 
-          run : "$HOME/dist/bin/consumer"
+          run : "${{ env.HOME }}/dist/bin/consumer"
             
   # build-mac:
   #   name: MacOS test, clang
