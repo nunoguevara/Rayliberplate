@@ -82,20 +82,17 @@ jobs:
             -DCMAKE_INSTALL_PREFIX="$HOME/dist"
           cmake --build consumer-build
           cmake --install consumer-build
-          
+          ls -a "$HOME/dist/bin"
+
+      - name : Preparing library path (Linux)
+        if : runner.os == 'Linux'
+        run: export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/dist/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+        
       - name : Running the test program (Linux)
         if : runner.os == 'Linux'
         uses : GabrielBB/xvfb-action@v1
         with : 
-          run : |
-            export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/dist/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
-            "$HOME/dist/bin/consumer"
-            
-      - name : Running the test program (MacOS)
-        if : runner.os == 'macOS'
-        run: |
-          export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$HOME/dist/lib${DYLD_LIBRARY_PATH:+:$DYLD_LIBRARY_PATH}"
-          "$HOME/dist/bin/consumer"
+          run : "$HOME/dist/bin/consumer"
             
   # build-mac:
   #   name: MacOS test, clang
