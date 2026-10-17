@@ -93,7 +93,7 @@ jobs:
         if : runner.os == 'Linux'
         uses : GabrielBB/xvfb-action@v1
         with : 
-          run : "${{ env.HOME }}/dist/bin/consumer"
+          run : "home/runner/dist/bin/consumer"
             
   # build-mac:
   #   name: MacOS test, clang
