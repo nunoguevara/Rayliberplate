@@ -46,7 +46,11 @@ jobs:
         
       - name : Installing and building raylib
         run : |
-          git clone --branch v6.0 --single-branch --depth 1 https://github.com/raysan5/raylib.git
+          git clone \
+            --branch 6.0 \
+            --single-branch \
+            --depth 1 \
+            https://github.com/raysan5/raylib.git
           cmake -S raylib -B raylib/build \
             -DBUILD_SHARED_LIBS=ON \
             -DCMAKE_C_COMPILER="${{ matrix.compiler }}" \
