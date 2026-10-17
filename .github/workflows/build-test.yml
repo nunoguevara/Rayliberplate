@@ -35,39 +35,50 @@ jobs:
             libxcursor-dev \
             libgl1-mesa-dev \
             libglu1-mesa-dev
-
+            
+      - name: Setting up sandbox folder
+        run: | 
+          mkdir "$HOME/sandbox"
+        
       - name: Installing and building raylib
         run: |
           git clone https://github.com/raysan5/raylib.git
-          cmake -S raylib -B raylib/build -DBUILD_SHARED_LIBS=ON -DBUILD_C_COMPILER=${{ matrix.compiler }}
+          cmake -S raylib -B raylib/build \
+            -DBUILD_SHARED_LIBS=ON \
+            -DCMAKE_C_COMPILER=${{ matrix.compiler }} \
+            -DCMAKE_INSTALL_PREFIX="$HOME/sandbox"
           cmake --build raylib/build
-          sudo cmake --install raylib/build
-          sudo ldconfig
-          
-      - name: Checking if raylib is installed
-        run: |
-          ldconfig -p | grep -i raylib
+          cmake --install raylib/build
 
       - name : Configuring Rayliberplate
         run: |
-          cmake -S . -B build -DCMAKE_C_COMPILER=${{ matrix.compiler }} -DCMAKE_BUILD_TYPE=Debug -DCMAKE_SHARED_LIBS=ON
+          cmake -S . -B build \
+            -DCMAKE_C_COMPILER=${{ matrix.compiler }} \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DBUILD_SHARED_LIBS=ON \
+            -DCMAKE_INSTALL_PREFIX="$HOME/sandbox"
 
       - name : Building and installing Rayliberplate
         run: |
           cmake --build build
-          sudo cmake --install build
+          cmake --install build
 
       - name : Building the test program
         run : |
           cd tests/consumer
-          cmake -S . -B consumer-build -DCMAKE_C_COMPILER=${{ matrix.compiler }} -DCMAKE_BUILD_TYPE=Debug
+          cmake -S . -B consumer-build \
+            -DCMAKE_C_COMPILER=${{ matrix.compiler }} \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_INSTALL_PREFIX="$HOME/sandbox"
           cmake --build consumer-build
           cmake --install consumer-build
           
       - name : Running the test program
         uses: GabrielBB/xvfb-action@v1
         with: 
-          run : consumer
+          run : |
+          export PATH="$HOME/sandbox/bin:$PATH"
+          LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/sandbox/lib" consumer
             
   build-mac:
     name: MacOS test, clang
