@@ -87,7 +87,7 @@ jobs:
       - name : Preparing library path and permission (Linux)
         if : runner.os == 'Linux'
         run: |
-          export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/dist/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+          echo "LD_LIBRARY_PATH=$HOME/dist/lib${LD_LIBRARY_PATH}" >> $GITHUB_ENV
           
       - name : Running the test program (Linux)
         if : runner.os == 'Linux'
