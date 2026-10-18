@@ -197,7 +197,9 @@ RayPlateStatus SetWindowSizeDivisor(double div_covx, double div_covy) {
   if (screenWidth <= 0 || screenWidth <= 0) {
     return RAY_PLATE_INVALID_STATE;
   }
-    
+
+  SetWindowSize(screenWidth, screenHeight);
+  
   return RAY_PLATE_OK;
   
 }
