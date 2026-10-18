@@ -24,21 +24,30 @@ int EdgeCaseHandlingTest() {
 
   RayPlateStatus status;
   int i = 1;
-  
-  status = InitRelativeWindowPercentage("Test", 101, 80);
+
+  // 1
+  status = InitRelativeWindowPercentage("Test", NaN, 80);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
-  
-  status = InitRelativeWindowPercentage("Test", 80, 101);
+
+  // 2
+  status = InitRelativeWindowPercentage("Test", 80, NaN);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
-  
-  status = InitRelativeWindowPercentage("Test", -1, 10);
+
+  // 3
+  status = InitRelativeWindowPercentage("Test", NaN, NaN);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
-  
+
+  // 4
   status = InitRelativeWindowPercentage("Test", 10, -1);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
-  status = InitRelativeWindowPercentage("Test", 80, 80);
+  // 5
+  status = InitRelativeWindowPercentage("Test", 10, -1);
+  if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
+
+  status = InitRelativeWindowPercentage("Test", 10, 10);
   if(!ReportTestResult(&i, status == RAY_PLATE_OK)) return 1;
+  
   CloseWindow();
 
   if (IsWindowReady()) {
