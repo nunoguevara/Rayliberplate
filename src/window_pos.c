@@ -4,7 +4,7 @@
 #include "raylib.h"
 #include "rayliberplate.h"
 
-RayPlateStatus SetWindowPosCenter() {
+RayPlateStatus SetWindowPosCenter(void) {
 
   if (!IsWindowReady()) {
     return RAY_PLATE_INVALID_STATE;
