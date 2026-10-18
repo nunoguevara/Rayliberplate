@@ -138,3 +138,38 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
   return RAY_PLATE_OK;
   
 }
+
+RayPlateStatus SetWindowSizePercentage(int pct_covx, int pct_covy) {
+
+  if (!IsWindowReady()) {
+    return RAY_PLATE_INVALID_STATE;
+  }
+
+  if (pct_covx <= 0 || pct_covy <= 0) {
+    return RAY_PLATE_INVALID_ARGUMENT;
+  }
+
+  if (pct_covx > 100 || pct_covy > 100) {
+    return RAY_PLATE_INVALID_ARGUMENT;
+  }
+
+  const int monitor = GetCurrentMonitor();
+
+  if (monitor < 0 || monitor >= GetMonitorCount()) {
+    CloseWindow();
+    return RAY_PLATE_INVALID_STATE;
+  }
+  
+  const int monitorWidth = GetMonitorWidth(monitor);
+  const int monitorHeight = GetMonitorHeight(monitor);
+  const int windowWidth = monitorWidth * (pct_covx / 100.0f);
+  const int windowHeight = monitorHeight * (pct_covy / 100.0f);
+
+  if (windowWidth <= 0 || windowHeight <= 0) {
+    return RAY_PLATE_INVALID_STATE;
+  }
+
+  SetWindowSize(windowWidth, windowHeight);
+
+  return RAY_PLATE_OK;
+}
