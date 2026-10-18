@@ -54,6 +54,8 @@ int main(void) {
 
   Player daBall(20.0f, 20.0f, 5.0f, 5.0f, 10.0f);
 
+  SetWindowSizePercentage(20, 20);
+  
   while (!WindowShouldClose()) {
   
     daBall.playerMovement(GetScreenWidth(), GetScreenHeight());
