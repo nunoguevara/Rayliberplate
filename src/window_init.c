@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include <math.h>
+#include <limits.h>
 #include "raylib.h"
 #include "rayliberplate.h"
 
@@ -10,12 +11,12 @@ RayPlateStatus InitRelativeWindowPercentage(const char *title, double pct_covx, 
   if (title == NULL) {
     return RAY_PLATE_INVALID_ARGUMENT;
   }
-  
-  if (pct_covx < 1 || pct_covy < 1 || pct_covx > 100 || pct_covy > 100) {
-    return RAY_PLATE_INVALID_ARGUMENT;
-  } 
 
   if (!isfinite(pct_covx) || !isfinite(pct_covy)) {
+    return RAY_PLATE_INVALID_ARGUMENT;
+  }
+
+  if (pct_covx <= 0 || pct_covy <= 0) {
     return RAY_PLATE_INVALID_ARGUMENT;
   }
 
@@ -41,15 +42,25 @@ RayPlateStatus InitRelativeWindowPercentage(const char *title, double pct_covx, 
   
   const int monitorWidth = GetMonitorWidth(monitor);
   const int monitorHeight = GetMonitorHeight(monitor);
-  const int windowWidth = monitorWidth * (pct_covx / 100.0); 
-  const int windowHeight = monitorHeight * (pct_covy / 100.0);
+  const double windowWidth = monitorWidth * (pct_covx / 100.0); 
+  const double windowHeight = monitorHeight * (pct_covy / 100.0);
 
-  if (windowWidth <= 0 || windowHeight <= 0) {
+  if (!isfinite(windowWidth) || !isfinite(windowHeight)) {
+    CloseWindow();
+    return RAY_PLATE_INVALID_STATE;
+  } 
+  
+  if (windowWidth > INT_MAX || windowHeight > INT_MAX) {
     CloseWindow();
     return RAY_PLATE_INVALID_STATE;
   }
   
-  SetWindowSize(windowWidth, windowHeight);
+  if (windowWidth < 1 || windowHeight < 1) {
+    CloseWindow();
+    return RAY_PLATE_INVALID_STATE;
+  }
+
+  SetWindowSize((int)windowWidth, (int)windowHeight);
 
   return RAY_PLATE_OK;
   
@@ -63,11 +74,11 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
     return RAY_PLATE_INVALID_ARGUMENT;
   }
 
-  if (div_covx < 1 || div_covy < 1) {
+  if (!isfinite(div_covx) || !isfinite(div_covy)) {
     return RAY_PLATE_INVALID_ARGUMENT;
   }
 
-  if (!isfinite(div_covx) || !isfinite(div_covy)) {
+  if (div_covx <= 0 || div_covy <= 0) {
     return RAY_PLATE_INVALID_ARGUMENT;
   }
 
@@ -82,7 +93,7 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
   }
 
   const int monitor = GetCurrentMonitor();
-
+  
   if (monitor < 0 || monitor >= GetMonitorCount()) {
     CloseWindow();
     return RAY_PLATE_INVALID_STATE;
@@ -90,14 +101,25 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
 
   const int monitorWidth = GetMonitorWidth(monitor);
   const int monitorHeight = GetMonitorHeight(monitor);
-  const int windowWidth = monitorWidth / div_covx;
-  const int windowHeight = monitorHeight / div_covy;
+  const double windowWidth = monitorWidth / div_covx;
+  const double windowHeight = monitorHeight / div_covy;
+
+  if (!isfinite(windowWidth) || !isfinite(windowHeight)) {
+    CloseWindow();
+    return RAY_PLATE_INVALID_STATE;
+  } 
   
-  if (windowWidth <= 0 || windowHeight <= 0) {
+  if (windowWidth > INT_MAX || windowHeight > INT_MAX) {
+    CloseWindow();
+    return RAY_PLATE_INVALID_STATE;
+  }
+  
+  if (windowWidth < 1 || windowHeight < 1) {
+    CloseWindow();
     return RAY_PLATE_INVALID_STATE;
   }
 
-  SetWindowSize(windowWidth, windowHeight);
+  SetWindowSize((int)windowWidth, (int)windowHeight);
   
   return RAY_PLATE_OK;
   
