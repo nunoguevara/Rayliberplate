@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "raylib.h"
+#include <math.h>
 #include "rayliberplate.h"
 
 /* This is rayliberplate diagnostic test to test
@@ -26,15 +27,15 @@ int EdgeCaseHandlingTest() {
   int i = 1;
 
   // 1
-  status = InitRelativeWindowPercentage("Test", NaN, 80);
+  status = InitRelativeWindowPercentage("Test", NAN, 80);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
   // 2
-  status = InitRelativeWindowPercentage("Test", 80, NaN);
+  status = InitRelativeWindowPercentage("Test", 80, NAN);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
   // 3
-  status = InitRelativeWindowPercentage("Test", NaN, NaN);
+  status = InitRelativeWindowPercentage("Test", INFINITY, 90);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
   // 4
