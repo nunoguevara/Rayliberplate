@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include <math.h>
+#include <limits.h>
 #include "raylib.h"
 #include "rayliberplate.h"
 
@@ -31,14 +32,22 @@ RayPlateStatus SetWindowPosCenter() {
     return RAY_PLATE_INVALID_STATE;
   }
 
-  if (windowWidth > monitorWidth || windowHeight > monitorHeight) {
+  const double windowPosX = (double)monitorPos.x + ((double)monitorWidth - windowWidth) / 2;
+  const double windowPosY = (double)monitorPos.y + ((double)monitorHeight - windowHeight) / 2;
+
+  if (!isfinite(windowPosX) || !isfinite(windowPosY)) {
     return RAY_PLATE_INVALID_STATE;
   }
 
-  const int windowPosX = monitorPos.x + (monitorWidth - windowWidth) / 2;
-  const int windowPosY = monitorPos.y + (monitorHeight - windowHeight) / 2;
+  if (windowPosX > INT_MAX || windowPosY > INT_MAX) {
+    return RAY_PLATE_INVALID_STATE;
+  }
 
-  SetWindowPosition(windowPosX, windowPosY);
+  if (windowPosX < INT_MIN || windowPosY < INT_MIN) {
+    return RAY_PLATE_INVALID_STATE;
+  } 
+
+  SetWindowPosition((int)windowPosX, (int)windowPosY);
 
   return RAY_PLATE_OK;
   
