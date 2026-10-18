@@ -199,4 +199,5 @@ RayPlateStatus SetWindowSizeDivisor(double div_covx, double div_covy) {
   }
     
   return RAY_PLATE_OK;
+  
 }
