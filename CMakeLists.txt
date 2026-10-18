@@ -19,7 +19,9 @@ find_package(raylib CONFIG REQUIRED)
 
 add_library(
     rayliberplate  
-    src/rayliberplate.c
+    src/window_init.c
+    src/window_pos.c
+    src/window_size.c
 )
 
 add_library(

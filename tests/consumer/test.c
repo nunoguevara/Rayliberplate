@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "raylib.h"
+#include <math.h>
 #include "rayliberplate.h"
+#include <float.h>
 
 /* This is rayliberplate diagnostic test to test
 new features and stuff, it could be ignored if you only
@@ -24,21 +26,30 @@ int EdgeCaseHandlingTest() {
 
   RayPlateStatus status;
   int i = 1;
-  
-  status = InitRelativeWindowPercentage("Test", 101, 80);
+
+  // 1
+  status = InitRelativeWindowPercentage("Test", NAN, 80);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
-  
-  status = InitRelativeWindowPercentage("Test", 80, 101);
+
+  // 2
+  status = InitRelativeWindowPercentage("Test", 80, NAN);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
-  
-  status = InitRelativeWindowPercentage("Test", -1, 10);
+
+  // 3
+  status = InitRelativeWindowPercentage("Test", INFINITY, 90);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
-  
+
+  // 4
   status = InitRelativeWindowPercentage("Test", 10, -1);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
-  status = InitRelativeWindowPercentage("Test", 80, 80);
+  // 5
+  status = InitRelativeWindowPercentage("Test", 10, DBL_MAX);
+  if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_STATE)) return 1;
+
+  status = InitRelativeWindowPercentage("Test", 10, 10);
   if(!ReportTestResult(&i, status == RAY_PLATE_OK)) return 1;
+  
   CloseWindow();
 
   if (IsWindowReady()) {
