@@ -9,20 +9,32 @@ A convenient, minuscule, QoL-first, easy-to-use unofficial wrapper for raylib's 
 - C++ compatible🔗
 
 ## Available functions
-`SetWindowPosCenter();`
-Centers the window on its current monitor
+`SetWindowPosCenter(void);`
+Centers the window on its current monitor.
 
-`InitRelativeWindowPercentage();`
-Initializes a window using percentages of monitor's dimensions
+`InitRelativeWindowPercentage(double pct_covx, double pct_covy, const char *title);`
+Initializes a window using percentages of monitor's dimensions.
 E.g,:
-`InitRelativeWindowPercentage("My Game", 75, 50);`
-Initializes a window titled "My Game" with the width of 75% of the monitor's dimension, and the height of 50% of the monitor's dimension
+`InitRelativeWindowPercentage(75, 50, "My Game");`
+Initializes a window titled "My Game" with the width of 75% of the monitor's dimension, and the height of 50% of the monitor's dimension.
 
-`InitRelativeWindowDivisor();`
+`InitRelativeWindowDivisor(double div_covx, double div_covy, const char *title);`
 Initializes a window using divisors of the monitor's dimensions.
 E,g:
-`InitRelativeWindowDivisor("My Game", 1, 2);`
-Initializes a window with the width of monitor's width / 1 and the height of monitor's height / 2
+`InitRelativeWindowDivisor(1, 2, "My Game");`
+Initializes a window with the width of monitor's width divided by 1 and the height of monitor's height divided by 2.
+
+`SetWindowSizePercentage(double pct_covx, double pct_covy);`
+Set the window size using percentages of monitor's dimensions, it requires a window to be initialized first.
+E,g:
+`SetWindowSizePercentage(75, 50);`
+Set the window size to the 75% of monitor's width and 50% of monitor's height.
+
+`SetWindowSizeDivisor(double div_covx, double div_covy);`
+Set the window size based on the divisor of the monitor's dimension.
+E,g:
+`SetWindowSizeDivisor(1, 2);`
+Set the window's width to the monitor's width divided by 1, and the window's height to the monitor's height divided by 2.
 
 # Installation Process📂
 ## Dependencies
