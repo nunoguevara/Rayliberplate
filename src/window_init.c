@@ -6,8 +6,7 @@
 
 // Initializing relative window using percentage
 
-RayPlateStatus InitRelativeWindowPercentage(const char *title, double pct_covx, double pct_covy) {
-  
+RayPlateStatus InitRelativeWindowPercentage(double pct_covx, double pct_covy, const char *title) {
   if (title == NULL) {
     return RAY_PLATE_INVALID_ARGUMENT;
   }
@@ -63,13 +62,11 @@ RayPlateStatus InitRelativeWindowPercentage(const char *title, double pct_covx, 
   SetWindowSize((int)windowWidth, (int)windowHeight);
 
   return RAY_PLATE_OK;
-  
 }
 
 // Initializing relative window using a divisor
 
-RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, double div_covy) {
-
+RayPlateStatus InitRelativeWindowDivisor(double div_covx, double div_covy, const char *title) {
   if (title == NULL) {
     return RAY_PLATE_INVALID_ARGUMENT;
   }
@@ -122,6 +119,5 @@ RayPlateStatus InitRelativeWindowDivisor(const char *title, double div_covx, dou
   SetWindowSize((int)windowWidth, (int)windowHeight);
   
   return RAY_PLATE_OK;
-  
 }
 
