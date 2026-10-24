@@ -28,26 +28,26 @@ int EdgeCaseHandlingTest() {
   int i = 1;
 
   // 1
-  status = InitRelativeWindowPercentage("Test", NAN, 80);
+  status = InitRelativeWindowPercentage(NAN, 80, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
   // 2
-  status = InitRelativeWindowPercentage("Test", 80, NAN);
+  status = InitRelativeWindowPercentage(80, NAN, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
   // 3
-  status = InitRelativeWindowPercentage("Test", INFINITY, 90);
+  status = InitRelativeWindowPercentage(INFINITY, 90, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
   // 4
-  status = InitRelativeWindowPercentage("Test", 10, -1);
+  status = InitRelativeWindowPercentage(10, -1, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
   // 5
-  status = InitRelativeWindowPercentage("Test", 10, DBL_MAX);
+  status = InitRelativeWindowPercentage(10, DBL_MAX, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_STATE)) return 1;
 
-  status = InitRelativeWindowPercentage("Test", 10, 10);
+  status = InitRelativeWindowPercentage(10, 10, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_OK)) return 1;
   
   CloseWindow();
@@ -64,13 +64,13 @@ int EdgeCaseHandlingTest() {
   printf("\nTest %d clear", i);
   i++;
 
-  status = InitRelativeWindowDivisor("Test", 0, 0);
+  status = InitRelativeWindowDivisor(0, 0, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
-  status = InitRelativeWindowDivisor("Test", -1, -1);
+  status = InitRelativeWindowDivisor(-1, -1, "Test");
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
 
-  status = InitRelativeWindowDivisor(NULL, 2, 1);
+  status = InitRelativeWindowDivisor(2, 1, NULL);
   if(!ReportTestResult(&i, status == RAY_PLATE_INVALID_ARGUMENT)) return 1;
   
   printf("\nEDGE CASE HANDLING TEST RAN SUCCESSFULY");
@@ -90,7 +90,7 @@ int main(void) {
 
   printf("\nOVERALL TESTS RAN SUCCESSFULY\n");
 
-  InitRelativeWindowDivisor("Test1", 1, 2);
+  InitRelativeWindowDivisor(1, 2, "Test1");
   SetWindowPosCenter();
 
   int testTime = 100;
