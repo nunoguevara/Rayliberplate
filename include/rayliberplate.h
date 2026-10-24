@@ -21,14 +21,14 @@ typedef enum RayPlateStatus {
 
 RayPlateStatus SetWindowPosCenter();
 RayPlateStatus InitRelativeWindowPercentage(
-  const char *title, 
   double pct_covx, 
-  double pct_covy
+  double pct_covy,
+  const char *title
 );
 RayPlateStatus InitRelativeWindowDivisor(
-  const char *title,
   double div_covx,
-  double div_covy
+  double div_covy,
+  const char *title
 );
 RayPlateStatus SetWindowSizePercentage(
   double pct_covx,
