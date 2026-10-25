@@ -5,7 +5,6 @@
 #include "rayliberplate.h"
 
 RayPlateStatus SetWindowSizePercentage(double pct_covx, double pct_covy) {
-
   if (!IsWindowReady()) {
     return RAY_PLATE_INVALID_STATE;
   }
@@ -47,7 +46,6 @@ RayPlateStatus SetWindowSizePercentage(double pct_covx, double pct_covy) {
 }
 
 RayPlateStatus SetWindowSizeDivisor(double div_covx, double div_covy) {
-
   if (!IsWindowReady()) {
     return RAY_PLATE_INVALID_STATE;
   }
@@ -86,5 +84,4 @@ RayPlateStatus SetWindowSizeDivisor(double div_covx, double div_covy) {
   SetWindowSize((int)windowWidth, (int)windowHeight);
   
   return RAY_PLATE_OK;
-  
 }
