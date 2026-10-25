@@ -5,7 +5,6 @@
 #include "rayliberplate.h"
 
 RayPlateStatus SetWindowPosCenter(void) {
-
   if (!IsWindowReady()) {
     return RAY_PLATE_INVALID_STATE;
   }
@@ -50,5 +49,4 @@ RayPlateStatus SetWindowPosCenter(void) {
   SetWindowPosition((int)windowPosX, (int)windowPosY);
 
   return RAY_PLATE_OK;
-  
 }
