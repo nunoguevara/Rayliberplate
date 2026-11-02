@@ -54,14 +54,15 @@ Then, you can either configure Rayliberplate normally (commonly `usr/local` on L
 ```Shell
 cmake -S . -B build 
 ```
-Or,  for installation under `/usr`, you can use:
-```Shell
-cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr
-```
-Last, you can run:
+Lastly, you can run:
 ```Shell
 cmake --build build
 cmake --install build
+```
+or (if you need administrative permission):
+```Shell
+cmake --build build
+sudo cmake --install build
 ```
 After that, you are ready to use the library and compile your code with it (Don't forget to include the header or the header's directory, and link the library or directory of the library)!
 
