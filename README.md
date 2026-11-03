@@ -1,9 +1,9 @@
 # Rayliberplate🍽️
 A convenient, minuscule, QoL-first, easy-to-use unofficial wrapper for raylib's window initializations!
 
+![GitHub Tag](https://img.shields.io/github/v/tag/nunoguevara/Rayliberplate?style=flat-square&logo=github&logoColor=%23ffffff&label=latest-version&color=green)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nunoguevara/Rayliberplate/build-test.yml?style=flat-square&logo=githubactions&logoColor=%23ffffff)
 ![GitHub License](https://img.shields.io/github/license/nunoguevara/rayliberplate?style=flat-square)
-
 
 ## Highlights
 - Fast⚡
