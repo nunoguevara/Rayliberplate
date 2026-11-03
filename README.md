@@ -2,7 +2,6 @@
 A convenient, minuscule, QoL-first, easy-to-use unofficial wrapper for raylib's window initializations!
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nunoguevara/Rayliberplate/build-test.yml?style=flat-square&logo=githubactions&logoColor=%23ffffff)
-![GitHub License](https://img.shields.io/github/license/nunoguevara/Rayliberplate?style=flat-square)
 
 ## Highlights
 - Fast⚡
